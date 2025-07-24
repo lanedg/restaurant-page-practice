@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url(./OpenSans-Regular.ttf);
+}
+
+:root {
+  --background-color: rgba(250, 226, 174, 0.808);
+  --nav-background: rgb(0, 0, 0);
+  --content-background: rgba(172, 219, 231, 0.822);
+  --button-background: rgb(186, 220, 243);
+}
+
+html {
+  background-color: var(--background-color);
+  font-family: "OpenSans";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  margin-top: 40px;
+  border: 2px, solid, black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--nav-background);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-button {
+  width: 5rem;
+  height: 2.5rem;
+  background-color: var(--button-background);
+}
+
+#content {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-color: var(--content-background);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2rem;
+  border: 2px, solid, black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.main-header {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.story {
+  border: 2px, solid, black;
+  padding: 5px;
+  border-radius: 10px;
+}
