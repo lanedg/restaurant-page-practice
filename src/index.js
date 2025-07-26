@@ -5,6 +5,8 @@ import "./styles.css";
 import { HomePageBuilder } from "./home";
 
 import { MenuBuilder } from "./menu";
+
+import { ContactBuilder } from "./contact";
 /*
 const content = document.getElementById("content");
 const homePageBuilder = new HomePageBuilder(content);
@@ -14,11 +16,13 @@ class RestaurantPageManager {
   #content;
   #homePageBuilder;
   #MenuBuilder;
+  #ContactBuilder;
 
   constructor(contentContainer) {
     this.#content = contentContainer;
     this.#homePageBuilder = new HomePageBuilder(this.#content);
     this.#MenuBuilder = new MenuBuilder(this.#content);
+    this.#ContactBuilder = new ContactBuilder(this.#content);
   }
 
   buildHomePage() {
@@ -29,6 +33,11 @@ class RestaurantPageManager {
   buildMenu() {
     this.#content.innerHTML = "";
     this.#MenuBuilder.buildMenu();
+  }
+
+  buildContact() {
+    this.#content.innerHTML = "";
+    this.#ContactBuilder.buildContactPage();
   }
 }
 
@@ -52,5 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtn.addEventListener("click", () => {
     pageManager.buildMenu();
     console.log("menu built");
+  });
+
+  const contactBtn = document.getElementById("contact-button");
+  contactBtn.addEventListener("click", () => {
+    pageManager.buildContact();
+    console.log("contact built");
   });
 });

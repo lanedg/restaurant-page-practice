@@ -104,3 +104,13 @@ nav {
   margin-bottom: 10px;
   background-color: var(--menu-item-picture-background);
 }
+
+.location-container {
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.contact-header {
+  font-size: 1.75rem;
+  text-decoration: underline;
+}
