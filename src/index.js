@@ -1,5 +1,3 @@
-console.log("working");
-
 import "./styles.css";
 
 import { HomePageBuilder } from "./home";
@@ -46,26 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("content")
   );
   pageManager.buildHomePage();
-  console.log("home page built");
 
   const homeBtn = document.getElementById("home-button");
-  console.log("homeBtn:");
-  console.log(homeBtn);
+
   homeBtn.addEventListener("click", () => {
     pageManager.buildHomePage();
-    console.log("home page built");
   });
 
   const menuBtn = document.getElementById("menu-button");
-  console.log(menuBtn);
+
   menuBtn.addEventListener("click", () => {
     pageManager.buildMenu();
-    console.log("menu built");
   });
 
   const contactBtn = document.getElementById("contact-button");
   contactBtn.addEventListener("click", () => {
     pageManager.buildContact();
-    console.log("contact built");
   });
 });
